@@ -14,23 +14,24 @@ app.use(
 
 app.use(express.json());
 
-const con = mysql.createConnection({
+//connecting to database
+const connectToDB = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "movies_db", //duombazes pavadinimas, joje gali buti daug ivairiu lenteliu, i kurias saugomi duomenys
+  database: "movies_db",
 });
 
 ///////////////////////////////////////////////////////
-//CREATE
+//data from input fields recording to server
 app.post("/movies", (req, res) => {
   const sql = `
     INSERT INTO movies
     (title, year, genre)
     VALUES (?, ?, ?)
  `;
-  //lauztiniuose skliaustuose paduodama tai, kas bus auksciau esancioj eilutej vietoj klaustuku:
-  con.query(
+
+  connectToDB.query(
     sql,
     [req.body.title, req.body.year, req.body.genre],
     function (err, result) {
@@ -42,9 +43,7 @@ app.post("/movies", (req, res) => {
 });
 
 ///////////////////////////////////////////////////////
-//IRASYMAS I SERVERI
-//LIST
-
+//get data from server
 app.get("/movies", (req, res) => {
   const sql = `
     SELECT
@@ -52,48 +51,45 @@ app.get("/movies", (req, res) => {
     FROM movies
     `;
 
-  con.query(sql, function (err, result) {
+  connectToDB.query(sql, function (err, result) {
     if (err) throw err;
     res.json(result);
   });
 });
 
 ///////////////////////////////////////////////////////
-//DELETE
-
+//remove item from database
 app.delete("/movies/:id", (req, res) => {
-  // klaustuka rasom vietoj id, nes sekancioj eilutej con.query... nurodom req.params.id
   const sql = `
   DELETE 
   FROM movies
   WHERE id = ?   
 `;
 
-  con.query(sql, [req.params.id], function (err, result) {
+  connectToDB.query(sql, [req.params.id], function (err, result) {
     console.log(result, err);
     res.json({ message: "ok" });
   });
 });
 
 ///////////////////////////////////////////////////////
-//EDIT
-
+//edit data
 app.put("/movies/:id", (req, res) => {
-  // klaustuka rasom vietoj id, nes sekancioj eilutej con.query... nurodom req.params.id
   const sql = `
   UPDATE movies
   SET title = ?, year = ?, genre = ?
   WHERE id = ?   
 `;
 
-  con.query(sql, [req.body.title, req.body.year, req.body.genre, req.params.id], function (err, result) {
-    console.log(result, err);
-    res.json({ message: "ok" });
-  });
+  connectToDB.query(
+    sql,
+    [req.body.title, req.body.year, req.body.genre, req.params.id],
+    function (err, result) {
+      console.log(result, err);
+      res.json({ message: "ok" });
+    }
+  );
 });
-
-
-
 
 /////////////////////////////////////////////
 app.listen(port, () => {
