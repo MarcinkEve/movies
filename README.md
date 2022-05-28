@@ -52,7 +52,7 @@ To run this app it is necessary to instal npm package and few dependencies.
 
 ## Usage
 
-To use this app in browser you need to login:
+To use this app in browser you need to login.\
 Valid data of login is:
 
 1.  user1:
@@ -67,7 +67,9 @@ Valid data of login is:
 http://movies-pi-umber.vercel.app/
 
 
-/////////////////////////////////////////////////////////////////////////////\
+\
+\
+\
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
