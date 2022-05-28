@@ -1,3 +1,50 @@
+# My favourites movies list app
+
+This application is made of two parts:
+
+- frontend - "src" directory
+- backend - "backend" directory
+
+It allows you to record your favourite movie title, year and genre. The data is saved in localhost mySQL database. List of saved movies is rendered in screen.
+
+It is possible to change list's data:
+
+- create a new record by clicking "Add it" button in header;
+- edit records by clicking "pencil" icon;
+- remove item from list by clicking "bin" icon.
+
+The list with item may be:
+
+- sorted by movie title;
+- sorted by movie years released;
+- filtered by genre.
+
+## Run app
+
+To run this app it is necessary to instal npm package and few dependencies.
+
+1. Find frontend directory- in command line (or terminal) write:
+>cd movies
+
+2. Install npm package to frontend:
+>npm i
+
+3. Run the app:
+>npm start
+
+4. Open new terminal and find backend directory:
+>cd Backend
+
+5. Install npm package to backend:
+>npm i
+
+6. Run the server:
+>npm start
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -7,7 +7,7 @@ function Sort({ doSortTitle, doSortYear }) {
   return (
     <>
       <div className="sort">
-        <h5>Sort by title: </h5>
+        <h4 className="sort-title">Sort by: </h4>
         <select
           value={choose}
           onChange={(event) => {
@@ -15,11 +15,11 @@ function Sort({ doSortTitle, doSortYear }) {
             doSortTitle(event.target.value); //run sorting function
           }}
         >
-          <option value="1">A-Z</option>
-          <option value="2">Z-A</option>
+          <option value="1">Title</option>
+          <option value="2">A-Z</option>
+          <option value="3">Z-A</option>
         </select>
 
-        <h5>Sort by year: </h5>
         <select
           value={choose}
           onChange={(event) => {
@@ -27,8 +27,9 @@ function Sort({ doSortTitle, doSortYear }) {
             doSortYear(event.target.value); //run sorting function
           }}
         >
-          <option value="3">Oldest</option>
-          <option value="4">Newest</option>
+          <option value="4">Newness</option>
+          <option value="5">Oldest</option>
+          <option value="6">Newest</option>
         </select>
       </div>
     </>

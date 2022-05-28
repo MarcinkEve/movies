@@ -11,7 +11,7 @@ function Edit({ setShowId, showData, setEdit }) {
     setGenre(event.target.value);
   };
 
-   //function that loads when "Save" button is clicked
+  //function that loads when "Save" button is clicked
   const buttonHandler = () => {
     setEdit({ title, year, genre, id: showData.id });
     setTitle("");
@@ -20,7 +20,7 @@ function Edit({ setShowId, showData, setEdit }) {
     setShowId(0);
   };
 
-  //this monitors showData (that shows record according its ID) changes and sets title, year and genre after update 
+  //this monitors showData (that shows record according its ID) changes and sets title, year and genre after update
   useEffect(() => {
     setTitle(showData.title);
     setYear(showData.year);
@@ -28,12 +28,12 @@ function Edit({ setShowId, showData, setEdit }) {
   }, [showData]);
 
   return (
-    <div>
+    <div className="edit-card">
       <div className="card-header">Mistakes destroyer below</div>
       <div className="card-body">
         {/* Title */}
-        <div>
-          <label>Movie</label>
+        <div className="card-row">
+          <label className="edit-label">Movie</label>
           <input
             type="text"
             onChange={(event) => setTitle(event.target.value)}
@@ -41,8 +41,8 @@ function Edit({ setShowId, showData, setEdit }) {
           ></input>
         </div>
         {/* Year */}
-        <div>
-          <label>Year</label>
+        <div className="card-row">
+          <label className="edit-label">Year</label>
           <input
             type="text"
             onChange={(event) => setYear(event.target.value)}
@@ -50,9 +50,9 @@ function Edit({ setShowId, showData, setEdit }) {
           ></input>
         </div>
         {/* Select genre */}
-        <div>
-          <legend>Genre</legend>
-          <select value={genre} onChange={selectChange}>
+        <div className="card-row">
+          <legend className="edit-label">Genre</legend>
+          <select value={genre} onChange={selectChange} className="edit-select">
             <option value="#">Select genre</option>
             <option value="Animation">Animation</option>
             <option value="Drama">Drama</option>
@@ -63,14 +63,20 @@ function Edit({ setShowId, showData, setEdit }) {
             <option value="Thriller">Thriller</option>
           </select>
         </div>
-        {/* Button for saving updated information*/}
-        <button onClick={buttonHandler} type="button">
-          Save
-        </button>
-        {/* Button for cancel editing*/}
-        <button onClick={() => setShowId(0)} type="button">
-          Cancel
-        </button>
+        <div className="edit-buttons">
+          {/* Button for saving updated information*/}
+          <button onClick={buttonHandler} type="button" className="save-button">
+            Save
+          </button>
+          {/* Button for cancel editing*/}
+          <button
+            onClick={() => setShowId(0)}
+            type="button"
+            className="cancel-button"
+          >
+            Cancel
+          </button>
+        </div>
       </div>
     </div>
   );

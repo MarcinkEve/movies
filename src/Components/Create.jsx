@@ -22,12 +22,12 @@ function Create({ setCreate, setInsert }) {
   };
 
   return (
-    <div>
+    <div className="create-card">
       <div className="card-header">New favourite movie</div>
       <div className="card-body">
         {/* Title */}
-        <div>
-          <label>Movie title</label>
+        <div className="card-row">
+          <label className="create-label">Movie title</label>
           <input
             type="text"
             onChange={(event) => setTitle(event.target.value)}
@@ -35,8 +35,8 @@ function Create({ setCreate, setInsert }) {
           ></input>
         </div>
         {/* Year */}
-        <div>
-          <label>Released Year</label>
+        <div className="card-row">
+          <label className="create-label">Released Year</label>
           <input
             type="text"
             onChange={(event) => setYear(event.target.value)}
@@ -44,10 +44,10 @@ function Create({ setCreate, setInsert }) {
           ></input>
         </div>
         {/* Select genre */}
-        <div>
-          <legend>Genre</legend>
-          <select value={genre} onChange={selectChange}>
-            <option value="#">Select genre</option>
+        <div className="card-row">
+          <legend className="create-label">Genre</legend>
+          <select value={genre} onChange={selectChange} className="create-select">
+            <option value="#">---</option>
             <option value="Animation">Animation</option>
             <option value="Drama">Drama</option>
             <option value="Family">Family</option>
@@ -58,7 +58,7 @@ function Create({ setCreate, setInsert }) {
           </select>
         </div>
         {/* Button for adding to list */}
-        <button onClick={buttonHandler} type="button">
+        <button onClick={buttonHandler} type="button" className="create-button">
           Add
         </button>
       </div>

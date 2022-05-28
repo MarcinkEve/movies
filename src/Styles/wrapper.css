@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  background-image: url(https://th.bing.com/th/id/R.93dd1aaaa82382854ba0a5a433c268ee?rik=jWz6MAO8zOPfWA&riu=http%3a%2f%2fwww.richpublicspeaking.co.uk%2fwp-content%2fuploads%2f2014%2f06%2fCinema-screen.jpg&ehk=AOD4yuMIJbg4o83JQxncxH6pjoqoZUKRI%2fJqjEzUtcQ%3d&risl=&pid=ImgRaw&r=0);
+  background-position: top;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}

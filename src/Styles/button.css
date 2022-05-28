@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header-button,
+.create-button,
+.save-button,
+.cancel-button {
+  width: 200px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgb(182, 178, 178);
+  border-radius: 5px;
+  padding: 15px 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+.create-button,
+.save-button,
+.cancel-button {
+  color: rgb(55, 1, 1);
+  font-weight: 600;
+}
+.header-button:hover,
+.create-button:hover,
+.save-button:hover,
+.cancel-button:hover {
+  background-color: rgb(55, 1, 1);
+  transform: scale(1.05);
+  transition: all 1s;
+}
+.create-button:hover,
+.save-button:hover,
+.cancel-button:hover {
+  color: white;
+}
+.movie-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 1rem 0 2rem;
+}
+.create-button,
+.save-button,
+.cancel-button {
+  width: 100%;
+  margin-top: 0.5rem;
+  background-color: transparent;
+}
+.edit-buttons,
+.create-button {
+  margin-top: 3rem;
+}
+.save-button {
+  background-color: transparent;
+}
+.header-button{
+  padding: 3px 0;
+}

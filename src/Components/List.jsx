@@ -4,20 +4,18 @@ import Movie from "./Movie";
 function List({ moovies, deleteMovie, setShowId }) {
   return (
     <>
-      <div>
-        <div>My favourites list</div>
-        <div>
-          <ul>
-            {moovies.map((el) => (
-              <Movie
-                key={el.id}
-                el={el}
-                deleteMovie={deleteMovie}
-                setShowId={setShowId}
-              ></Movie>
-            ))}
-          </ul>
-        </div>
+      <div className="list">
+        <ul>
+          {moovies.map((el, index) => (
+            <Movie
+              index={index}
+              key={el.id}
+              el={el}
+              deleteMovie={deleteMovie}
+              setShowId={setShowId}
+            ></Movie>
+          ))}
+        </ul>
       </div>
     </>
   );

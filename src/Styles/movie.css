@@ -1,0 +1,56 @@
+.list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 5px;
+  justify-items: flex-start;
+  width: 90%;
+  font-size: 18px;
+}
+.list-item:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.list-item-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.list_item-number {
+  padding: 0.5rem;
+  font-weight: 100;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.movie-title {
+  width: 250px;
+}
+.movie-year,
+.movie-genre {
+  width: 100px;
+  padding: 10px;
+}
+.remove,
+.edit {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+}
+.remove {
+  fill: rgb(252, 5, 5);
+}
+.edit {
+  fill: rgb(36, 129, 36);
+}
+.remove:hover,
+.edit:hover {
+  transform: scale(1.2);
+}
+h4 {
+  font-weight: 200;
+}

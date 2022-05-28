@@ -7,7 +7,7 @@ function Filter({ filter }) {
   return (
     <>
       <div>
-        <h5>Filter by genre: </h5>
+        <h4 className="filter-title">Filter by genre: </h4>
 
         <select
           value={select}

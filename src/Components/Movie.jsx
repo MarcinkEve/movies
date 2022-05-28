@@ -1,22 +1,33 @@
 //this function is for single movie description, updating and removing
-function Movie({ el, deleteMovie, setShowId }) {
+function Movie({ el, deleteMovie, setShowId, index }) {
   return (
     <>
-      <li>
-        <div>
-          <strong>{el.title}</strong>
-          <small>{el.year}</small>
-          <small>{el.genre}</small>
+      <li className="list-item">
+        <div className="list-item-description">
+        <div className="info">
+          <h3 className="list_item-number">{index + 1}.</h3>
+          <h3 className="movie-title">{el.title}</h3>
+          <h4 className="movie-year">{el.year}</h4>
+          <h4 className="movie-genre">{el.genre}</h4>
         </div>
-        <div>
-          {/* this button opens single movie editing form according its ID */}
-          <button onClick={() => setShowId(el.id)} type="button">
+        
+        <div className="movie-buttons">
+          {/* this button/symbol opens single movie editing form according its ID */}
+          {/* <button onClick={() => setShowId(el.id)} type="button">
             Edit
-          </button>
-          {/* this button removes single movie according its ID*/}
-          <button onClick={() => deleteMovie(el.id)} type="button">
+          </button> */}
+          <svg onClick={() => setShowId(el.id)} className="edit">
+            <use xlinkHref="#pencil"></use>
+          </svg>
+
+          {/* this button/symbol removes single movie according its ID*/}
+          {/* <button onClick={() => deleteMovie(el.id)} type="button">
             DELETE
-          </button>
+          </button> */}
+          <svg onClick={() => deleteMovie(el.id)} className="remove">
+            <use xlinkHref="#bin"></use>
+          </svg>
+        </div>
         </div>
       </li>
     </>

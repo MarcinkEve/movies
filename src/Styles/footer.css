@@ -1,0 +1,14 @@
+.footer {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-image: url(https://images.unsplash.com/photo-1589535189132-7221b70db02a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1236&q=80);
+  background-size: cover;
+  padding: 0.5rem;
+  max-width: 100%;
+  height: fit-content;
+  color: white;
+  font-size: small;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import "./styles.css";
+import "./Styles/login.css";
 import Wrapper from "./Components/Wrapper";
 
 function App() {

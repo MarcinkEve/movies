@@ -1,0 +1,39 @@
+.edit-card {
+  background-image: url(https://images.unsplash.com/photo-1587132129911-80e544e7e7b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=883&q=80);
+  background-repeat: repeat;
+}
+.card-header {
+  background-image: url(https://images.unsplash.com/photo-1587132129911-80e544e7e7b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=883&q=80);
+  background-position: center;
+  color: rgb(55, 1, 1);
+  font-weight: 600;
+  font-size: 25px;
+  height: 50px;
+  padding-top: 15px;
+  text-align: center;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+.card-row {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+input {
+  padding: 3px;
+  font-size: 20px;
+}
+.edit-label {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.edit-select {
+  width: 100%;
+  font-size: 20px;
+  background-color: transparent;
+  color: black;
+}

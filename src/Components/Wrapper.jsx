@@ -4,6 +4,9 @@ import List from "./List";
 import Show from "./Show";
 import Header from "./Header";
 import Insert from "./Insert";
+import Footer from "./Footer";
+import "../Styles/allStyles.css";
+
 
 function Wrapper() {
   const [create, setCreate] = useState(null); //this helps create record
@@ -159,6 +162,9 @@ function Wrapper() {
   const doSortTitle = (value) => {
     switch (parseInt(value)) {
       case 1:
+        setMovies(moviesOrg);
+        break;
+      case 2:
         setMovies((mov) => {
           mov.sort((a, b) => {
             if (a.title > b.title) {
@@ -172,7 +178,7 @@ function Wrapper() {
           return [...mov];
         });
         break;
-      case 2:
+      case 3:
         setMovies((mov) => {
           mov.sort((a, b) => {
             if (a.title > b.title) {
@@ -194,10 +200,13 @@ function Wrapper() {
   const doSortYear = (value) => {
     const copy = [...movies];
     switch (parseInt(value)) {
-      case 3:
+      case 4:
+        setMovies(moviesOrg);
+        break;
+      case 5:
         setMovies(copy.sort((a, b) => a.year - b.year));
         break;
-      case 4:
+      case 6:
         setMovies(copy.sort((a, b) => b.year - a.year));
         break;
       default:
@@ -206,38 +215,41 @@ function Wrapper() {
 
   return (
     <>
-      <Header
-        doSortTitle={doSortTitle}
-        doSortYear={doSortYear}
-        filter={filter}
-        insertCreate={insertCreate}
-      ></Header>
-      <div>
+      <div className="wrapper">
+        <Header
+          doSortTitle={doSortTitle}
+          doSortYear={doSortYear}
+          filter={filter}
+          insertCreate={insertCreate}
+        ></Header>
         <div>
           <div>
-            {insert ? (
-              <Insert
-                setCreate={setCreate}
-                insert={insert}
-                setInsert={setInsert}
-              ></Insert>
-            ) : null}
-          </div>
-          <div>
-            <List
-              moovies={movies}
-              deleteMovie={deleteMovie}
-              setShowId={setShowId}
-            ></List>
+            <div>
+              {insert ? (
+                <Insert
+                  setCreate={setCreate}
+                  insert={insert}
+                  setInsert={setInsert}
+                ></Insert>
+              ) : null}
+            </div>
+            <div>
+              <List
+                moovies={movies}
+                deleteMovie={deleteMovie}
+                setShowId={setShowId}
+              ></List>
+            </div>
           </div>
         </div>
+        <Show
+          id={showId}
+          setShowId={setShowId}
+          show={show}
+          setEdit={setEdit}
+        ></Show>
       </div>
-      <Show
-        id={showId}
-        setShowId={setShowId}
-        show={show}
-        setEdit={setEdit}
-      ></Show>
+      <Footer></Footer>
     </>
   );
 }
