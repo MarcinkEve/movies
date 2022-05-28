@@ -55,11 +55,11 @@ To run this app it is necessary to instal npm package and few dependencies.
 To use this app in browser you need to login.\
 Valid data of login is:
 
-1.  user1:
-    username: "user1"
+1.  user1:\
+    username: "user1"\
     password: "pass1"
 
-2.  username: "user2"
+2.  username: "user2"\
     password: "pass2"
 
 
