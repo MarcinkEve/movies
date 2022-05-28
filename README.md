@@ -49,7 +49,6 @@ To run this app it is necessary to instal npm package and few dependencies.
 
    App runs on it's own server at http://localhost:5050
 
-
 ## Usage
 
 To use this app in browser you need to login.\
@@ -59,17 +58,17 @@ Valid data of login is:
     username: "user1"\
     password: "pass1"
 
-2.  username: "user2"\
+2.  user2:\
+    username: "user2"\
     password: "pass2"
 
+## Live demo:
 
-## Live demo: 
 http://movies-pi-umber.vercel.app/
 
+\
+\
 
-\
-\
-\
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
