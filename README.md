@@ -1,6 +1,6 @@
 # My favourites movies list app
 
-This application is made of two parts:
+This application is made with React and contains two parts:
 
 - frontend - "src" directory
 - backend - "backend" directory
@@ -61,6 +61,10 @@ Valid data of login is:
 
 2.  username: "user2"
     password: "pass2"
+
+
+Live demo: http://movies-pi-umber.vercel.app/
+
 
 /////////////////////////////////////////////////////////////////////////////\
 # Getting Started with Create React App
