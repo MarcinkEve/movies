@@ -5,7 +5,7 @@ This application is made of two parts:
 - frontend - "src" directory
 - backend - "backend" directory
 
-It allows you to record your favourite movie title, year and genre. The data is saved in localhost mySQL database. List of saved movies is rendered in screen.
+It allows you to logIn to your account and record your favourite movie title, year and genre. The data is saved in localhost mySQL database. List of saved movies is rendered in screen.
 
 It is possible to change list's data:
 
@@ -24,23 +24,39 @@ The list with item may be:
 To run this app it is necessary to instal npm package and few dependencies.
 
 1. Find frontend directory- in command line (or terminal) write:
->cd movies
+
+   > cd movies
 
 2. Install npm package to frontend:
->npm i
+
+   > npm i
 
 3. Run the app:
->npm start
+
+   > npm start
 
 4. Open new terminal and find backend directory:
->cd Backend
+
+   > cd Backend
 
 5. Install npm package to backend:
->npm i
+
+   > npm i
 
 6. Run the server:
->npm start
+   > npm start
 
+## Usage
+
+To use this app in browser you need to login:
+Valid data of login is:
+
+1.  user1:
+    username: "user1"
+    password: "pass1"
+
+2.  username: "user2"
+    password: "pass2"
 
 
 
