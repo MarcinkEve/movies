@@ -44,7 +44,11 @@ To run this app it is necessary to instal npm package and few dependencies.
    > npm i
 
 6. Run the server:
+
    > npm start
+
+   App runs on it's own server at http://localhost:5050
+
 
 ## Usage
 
@@ -58,9 +62,7 @@ Valid data of login is:
 2.  username: "user2"
     password: "pass2"
 
-
-
-
+/////////////////////////////////////////////////////////////////////////////\
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
