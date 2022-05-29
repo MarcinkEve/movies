@@ -1,4 +1,4 @@
-# My favourites movies list app
+# My favourite movies list app
 
 This application is made with React and contains two parts:
 
