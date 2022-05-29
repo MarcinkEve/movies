@@ -16,7 +16,7 @@ function Filter({ filter }) {
             filter(event.target.value);  //this filters according select option value
           }}
         >
-          <option value="1">--All--</option>
+          <option value="1">All</option>
           <option value="2">Animation</option>
           <option value="3">Drama</option>
           <option value="4">Family</option>
