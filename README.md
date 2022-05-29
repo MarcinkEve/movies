@@ -2,8 +2,8 @@
 
 This application is made with React and contains two parts:
 
-- frontend - "src" directory
-- backend - "backend" directory
+- frontend - "src" directory;
+- backend - "backend" directory.
 
 It allows you to logIn to your account and record your favourite movie title, year and genre. The data is saved in localhost mySQL database. List of saved movies is rendered in screen.
 
