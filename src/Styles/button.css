@@ -6,7 +6,8 @@
 .header-button,
 .create-button,
 .save-button,
-.cancel-button {
+.cancel-button,
+.logout-button {
   width: 200px;
   background-color: transparent;
   color: white;
@@ -25,7 +26,8 @@
 .header-button:hover,
 .create-button:hover,
 .save-button:hover,
-.cancel-button:hover {
+.cancel-button:hover,
+.logout-button:hover {
   background-color: rgb(55, 1, 1);
   transform: scale(1.05);
   transition: all 1s;
@@ -56,6 +58,10 @@
 .save-button {
   background-color: transparent;
 }
-.header-button{
+.header-button,
+.logout-button {
   padding: 3px 0;
+}
+.logout-button {
+  width: 130px;
 }

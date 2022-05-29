@@ -15,8 +15,7 @@ const moviesDemo = [
   { id: 5, title: "The Lake House", year: 2006, genre: "Romance" },
 ];
 
-function Wrapper() {
-
+function Wrapper({ setIsSubmitted }) {
   const [create, setCreate] = useState(null); //this helps create record
   const [edit, setEdit] = useState(null); //this helps edit record
   const [movies, setMovies] = useState([]); //this make array of movies
@@ -225,6 +224,7 @@ function Wrapper() {
     <>
       <div className="wrapper">
         <Header
+          setIsSubmitted={setIsSubmitted}
           moviesDemo={moviesDemo}
           doSortTitle={doSortTitle}
           doSortYear={doSortYear}
@@ -235,7 +235,11 @@ function Wrapper() {
           <div>
             <div>
               {insert ? (
-                <Insert setCreate={setCreate} insert={insert} setInsert={setInsert}></Insert>
+                <Insert
+                  setCreate={setCreate}
+                  insert={insert}
+                  setInsert={setInsert}
+                ></Insert>
               ) : null}
             </div>
             <div>
@@ -248,7 +252,12 @@ function Wrapper() {
             </div>
           </div>
         </div>
-        <Show id={showId} setShowId={setShowId} show={show} setEdit={setEdit}></Show>
+        <Show
+          id={showId}
+          setShowId={setShowId}
+          show={show}
+          setEdit={setEdit}
+        ></Show>
       </div>
       <Footer></Footer>
     </>

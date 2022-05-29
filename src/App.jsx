@@ -78,7 +78,11 @@ function App() {
   return (
     <div className="app">
       <div className="login-form">
-        {isSubmitted ? <Wrapper></Wrapper> : renderForm}
+        {isSubmitted ? (
+          <Wrapper setIsSubmitted={setIsSubmitted}></Wrapper>
+        ) : (
+          renderForm
+        )}
       </div>
     </div>
   );

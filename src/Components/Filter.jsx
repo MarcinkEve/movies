@@ -7,16 +7,14 @@ function Filter({ filter }) {
   return (
     <>
       <div>
-        <h4 className="filter-title">Filter by genre: </h4>
-
         <select
           value={select}
           onChange={(event) => {
             setSelect(event.target.value); //this sets select option value
-            filter(event.target.value);  //this filters according select option value
+            filter(event.target.value); //this filters according select option value
           }}
         >
-          <option value="1">All</option>
+          <option value="1">By genre</option>
           <option value="2">Animation</option>
           <option value="3">Drama</option>
           <option value="4">Family</option>
