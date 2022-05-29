@@ -5,7 +5,7 @@ function List({ moviesDemo, moovies, deleteMovie, setShowId }) {
   return (
     <>
       <div className="list">
-        <ul>
+      <ul>
           {moviesDemo.map((el, index) => (
             <Movie
               index={index}
@@ -15,7 +15,7 @@ function List({ moviesDemo, moovies, deleteMovie, setShowId }) {
               setShowId={setShowId}
             ></Movie>
           ))}
-        </ul>
+        </ul>        
         <ul>
           {moovies.map((el, index) => (
             <Movie

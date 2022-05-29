@@ -7,15 +7,15 @@ import Insert from "./Insert";
 import Footer from "./Footer";
 import "../Styles/allStyles.css";
 
-function Wrapper() {
-  const moviesDemo = [
-    { id: 1, title: "A Dog's Purpose", year: 2017, genre: "Family" },
-    { id: 2, title: "Atonement", year: 2007, genre: "Romance" },
-    { id: 3, title: "Titanic", year: 1997, genre: "Drama" },
-    { id: 4, title: "Final Destination", year: 2000, genre: "Horror" },
-    { id: 5, title: "The Lake House", year: 2006, genre: "Romance" },
-  ];
+const moviesDemo = [
+  { id: 1, title: "A Dog's Purpose", year: 2017, genre: "Family" },
+  { id: 2, title: "Atonement", year: 2007, genre: "Romance" },
+  { id: 3, title: "Titanic", year: 1997, genre: "Drama" },
+  { id: 4, title: "Final Destination", year: 2000, genre: "Horror" },
+  { id: 5, title: "The Lake House", year: 2006, genre: "Romance" },
+];
 
+function Wrapper() {
   const [create, setCreate] = useState(null); //this helps create record
   const [edit, setEdit] = useState(null); //this helps edit record
   const [movies, setMovies] = useState([]); //this make array of movies
@@ -224,7 +224,7 @@ function Wrapper() {
     <>
       <div className="wrapper">
         <Header
-          moviesDemo={moviesDemo}
+          // demoSortTitle={demoSortTitle}
           doSortTitle={doSortTitle}
           doSortYear={doSortYear}
           filter={filter}
