@@ -1,7 +1,7 @@
 import Filter from "./Filter";
 import Sort from "./Sort";
 
-function Header({ doSortTitle, doSortYear, filter, insert, insertCreate }) {
+function Header({ moviesDemo, doSortTitle, doSortYear, filter, insert, insertCreate }) {
   return (
     <div className="header">
       <div className="header_title-bin">
@@ -16,8 +16,8 @@ function Header({ doSortTitle, doSortYear, filter, insert, insertCreate }) {
         </div>
       </div>
       <div className="filters">
-        <Sort doSortTitle={doSortTitle} doSortYear={doSortYear}></Sort>
-        <Filter filter={filter}></Filter>
+        <Sort moviesDemo={moviesDemo} doSortTitle={doSortTitle} doSortYear={doSortYear}></Sort>
+        <Filter moviesDemo={moviesDemo} filter={filter}></Filter>
       </div>
     </div>
   );
