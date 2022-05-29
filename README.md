@@ -5,7 +5,7 @@ This application is made with React and contains two parts:
 - frontend - "src" directory;
 - backend - "backend" directory.
 
-It allows you to logIn to your account and record your favourite movie title, year and genre. The data is saved in localhost mySQL database. List of saved movies is rendered in screen.
+It allows you to log in to your account and record your favourite movie title, year and genre. The data is saved in localhost MySQL database. List of saved movies is rendered in screen. It is also possible to log out and back to log in form.
 
 It is possible to change list's data:
 
@@ -13,7 +13,7 @@ It is possible to change list's data:
 - edit records by clicking "pencil" icon;
 - remove item from list by clicking "bin" icon.
 
-The list with item may be:
+The list of items may be:
 
 - sorted by movie title;
 - sorted by movie years released;
@@ -63,6 +63,7 @@ Valid data of login is:
     password: "pass2"
 
 ## Live demo:
+(due to local DB for demonstration purposes it renders static data from code)
 
 http://movies-pi-umber.vercel.app/
 
