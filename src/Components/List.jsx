@@ -1,12 +1,12 @@
 import Movie from "./Movie";
 
 //this function renders all movies as a list
-function List({ moviesDemo, moovies, deleteMovie, setShowId }) {
+function List({ showDemo, moovies, deleteMovie, setShowId }) {
   return (
     <>
       <div className="list">
-      <ul>
-          {moviesDemo.map((el, index) => (
+        <ul>
+          {showDemo.map((el, index) => (
             <Movie
               index={index}
               key={el.id}
@@ -15,8 +15,7 @@ function List({ moviesDemo, moovies, deleteMovie, setShowId }) {
               setShowId={setShowId}
             ></Movie>
           ))}
-        </ul>   
-             
+        </ul>
         <ul>
           {moovies.map((el, index) => (
             <Movie

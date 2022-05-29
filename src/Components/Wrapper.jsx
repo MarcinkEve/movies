@@ -16,6 +16,14 @@ const moviesDemo = [
 ];
 
 function Wrapper({ setIsSubmitted }) {
+  const [showDemo, setShowDemo] = useState([]);
+  const [showDemoOrg, setShowDemoOrg] = useState([]);
+
+  useEffect(() => {
+    setShowDemo(moviesDemo.slice(0, moviesDemo.length));
+    setShowDemoOrg(moviesDemo.slice(0, moviesDemo.length));
+  }, []);
+
   const [create, setCreate] = useState(null); //this helps create record
   const [edit, setEdit] = useState(null); //this helps edit record
   const [movies, setMovies] = useState([]); //this make array of movies
@@ -81,9 +89,19 @@ function Wrapper({ setIsSubmitted }) {
   const filter = (value) => {
     switch (parseInt(value)) {
       case 1:
+        setShowDemo(showDemoOrg);
         setMovies(moviesOrg);
         break;
       case 2:
+        setShowDemo(showDemoOrg);
+        setShowDemo((mov) => {
+          return mov.filter((el) => {
+            if (el.genre === "Animation") {
+              return el;
+            }
+            return 0;
+          });
+        });
         setMovies(moviesOrg);
         setMovies((mov) => {
           return mov.filter((el) => {
@@ -95,6 +113,15 @@ function Wrapper({ setIsSubmitted }) {
         });
         break;
       case 3:
+        setShowDemo(showDemoOrg);
+        setShowDemo((mov) => {
+          return mov.filter((el) => {
+            if (el.genre === "Drama") {
+              return el;
+            }
+            return 0;
+          });
+        });
         setMovies(moviesOrg);
         setMovies((mov) => {
           return mov.filter((el) => {
@@ -106,6 +133,15 @@ function Wrapper({ setIsSubmitted }) {
         });
         break;
       case 4:
+        setShowDemo(showDemoOrg);
+        setShowDemo((mov) => {
+          return mov.filter((el) => {
+            if (el.genre === "Family") {
+              return el;
+            }
+            return 0;
+          });
+        });
         setMovies(moviesOrg);
         setMovies((mov) => {
           return mov.filter((el) => {
@@ -117,6 +153,15 @@ function Wrapper({ setIsSubmitted }) {
         });
         break;
       case 5:
+        setShowDemo(showDemoOrg);
+        setShowDemo((mov) => {
+          return mov.filter((el) => {
+            if (el.genre === "Horror") {
+              return el;
+            }
+            return 0;
+          });
+        });
         setMovies(moviesOrg);
         setMovies((mov) => {
           return mov.filter((el) => {
@@ -128,6 +173,15 @@ function Wrapper({ setIsSubmitted }) {
         });
         break;
       case 6:
+        setShowDemo(showDemoOrg);
+        setShowDemo((mov) => {
+          return mov.filter((el) => {
+            if (el.genre === "Romance") {
+              return el;
+            }
+            return 0;
+          });
+        });
         setMovies(moviesOrg);
         setMovies((mov) => {
           return mov.filter((el) => {
@@ -139,6 +193,15 @@ function Wrapper({ setIsSubmitted }) {
         });
         break;
       case 7:
+        setShowDemo(showDemoOrg);
+        setShowDemo((mov) => {
+          return mov.filter((el) => {
+            if (el.genre === "SciFi") {
+              return el;
+            }
+            return 0;
+          });
+        });
         setMovies(moviesOrg);
         setMovies((mov) => {
           return mov.filter((el) => {
@@ -150,6 +213,15 @@ function Wrapper({ setIsSubmitted }) {
         });
         break;
       case 8:
+        setShowDemo(showDemoOrg);
+        setShowDemo((mov) => {
+          return mov.filter((el) => {
+            if (el.genre === "Thriller") {
+              return el;
+            }
+            return 0;
+          });
+        });
         setMovies(moviesOrg);
         setMovies((mov) => {
           return mov.filter((el) => {
@@ -169,9 +241,22 @@ function Wrapper({ setIsSubmitted }) {
   const doSortTitle = (value) => {
     switch (parseInt(value)) {
       case 1:
+        setShowDemo(showDemoOrg);
         setMovies(moviesOrg);
         break;
       case 2:
+        setShowDemo((mov) => {
+          mov.sort((a, b) => {
+            if (a.title > b.title) {
+              return 1;
+            }
+            if (a.title < b.title) {
+              return -1;
+            }
+            return 0;
+          });
+          return [...mov];
+        });
         setMovies((mov) => {
           mov.sort((a, b) => {
             if (a.title > b.title) {
@@ -186,6 +271,18 @@ function Wrapper({ setIsSubmitted }) {
         });
         break;
       case 3:
+        setShowDemo((mov) => {
+          mov.sort((a, b) => {
+            if (a.title > b.title) {
+              return -1;
+            }
+            if (a.title < b.title) {
+              return 1;
+            }
+            return 0;
+          });
+          return [...mov];
+        });
         setMovies((mov) => {
           mov.sort((a, b) => {
             if (a.title > b.title) {
@@ -206,14 +303,18 @@ function Wrapper({ setIsSubmitted }) {
   //sort by year
   const doSortYear = (value) => {
     const copy = [...movies];
+    const copyDemo = [...showDemo];
     switch (parseInt(value)) {
       case 4:
+        setShowDemo(showDemoOrg);
         setMovies(moviesOrg);
         break;
       case 5:
+        setShowDemo(copyDemo.sort((a, b) => a.year - b.year));
         setMovies(copy.sort((a, b) => a.year - b.year));
         break;
       case 6:
+        setShowDemo(copyDemo.sort((a, b) => b.year - a.year));
         setMovies(copy.sort((a, b) => b.year - a.year));
         break;
       default:
@@ -244,6 +345,7 @@ function Wrapper({ setIsSubmitted }) {
             </div>
             <div>
               <List
+                showDemo={showDemo}
                 moviesDemo={moviesDemo}
                 moovies={movies}
                 deleteMovie={deleteMovie}

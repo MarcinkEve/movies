@@ -19,7 +19,7 @@ function Filter({ filter }) {
           <option value="3">Drama</option>
           <option value="4">Family</option>
           <option value="5">Horror</option>
-          <option value="6">Romantic</option>
+          <option value="6">Romance</option>
           <option value="7">Sci-Fi</option>
           <option value="8">Thriller</option>
         </select>
