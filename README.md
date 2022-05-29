@@ -1,9 +1,9 @@
-# My favourites movies list app
+# My favourite movies list app
 
 This application is made with React and contains two parts:
 
-- frontend - "src" directory
-- backend - "backend" directory
+- frontend - "src" directory;
+- backend - "backend" directory.
 
 It allows you to logIn to your account and record your favourite movie title, year and genre. The data is saved in localhost mySQL database. List of saved movies is rendered in screen.
 
@@ -66,8 +66,7 @@ Valid data of login is:
 
 http://movies-pi-umber.vercel.app/
 
-\
-\
+https://user-images.githubusercontent.com/92999559/170839667-39dc9ee6-75ca-460d-b19d-732c1d812a56.mp4
 
 # Getting Started with Create React App
 

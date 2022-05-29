@@ -7,9 +7,7 @@ function Header({ doSortTitle, doSortYear, filter, insertCreate }) {
       <div className="header_title-bin">
         <h1 className="header_title">My MOVIES</h1>
         <div className="add-new">
-          <label className="header-label">
-            Fell in love with new one?
-          </label>
+          <label className="header-label">Fell in love with new one?</label>
           <button onClick={insertCreate} type="button" className="button header-button">
             Add it
           </button>

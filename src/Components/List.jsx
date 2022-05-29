@@ -15,7 +15,8 @@ function List({ moviesDemo, moovies, deleteMovie, setShowId }) {
               setShowId={setShowId}
             ></Movie>
           ))}
-        </ul>        
+        </ul>   
+             
         <ul>
           {moovies.map((el, index) => (
             <Movie
