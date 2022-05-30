@@ -7,7 +7,7 @@ This application is made with React and contains two parts:
 
 It allows you to log in to your account and record your favourite movie title, year and genre. The data is saved in localhost MySQL database. List of saved movies is rendered in screen. It is also possible to log out and back to log in form.
 
-It is possible to change list's data:
+It is possible to change list's data (only working with local DB):
 
 - create a new record by clicking "Add it" button in header;
 - edit records by clicking "pencil" icon;
