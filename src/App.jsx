@@ -1,22 +1,19 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
 import "./Styles/login.css";
 import Wrapper from "./Components/Wrapper";
+import Alert from "./Components/Alert/Alert";
 
 function App() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [alert, setAlert] = useState(1);
 
   // User Login info
   const database = [
     {
       username: "user1",
       password: "pass1",
-    },
-    {
-      username: "user2",
-      password: "pass2",
     },
   ];
 
@@ -56,23 +53,35 @@ function App() {
 
   // JSX code for login form
   const renderForm = (
-    <div className="form">
-      <form onSubmit={handleSubmit}>
-        <div className="input-container">
-          <label>Username </label>
-          <input type="text" name="uname" required />
-          {renderErrorMessage("uname")}
-        </div>
-        <div className="input-container">
-          <label>Password </label>
-          <input type="password" name="pass" required />
-          {renderErrorMessage("pass")}
-        </div>
-        <div className="button-container">
-          <input type="submit" />
-        </div>
-      </form>
-    </div>
+    <>
+      <div>
+        {alert ? (
+          <Alert
+            loginUser={database[0].username}
+            loginPass={database[0].password}
+            setAlert={setAlert}
+          />
+        ) : null}
+      </div>
+
+      <div className="form">
+        <form onSubmit={handleSubmit}>
+          <div className="input-container">
+            <label>Username </label>
+            <input type="text" name="uname" required />
+            {renderErrorMessage("uname")}
+          </div>
+          <div className="input-container">
+            <label>Password </label>
+            <input type="password" name="pass" required />
+            {renderErrorMessage("pass")}
+          </div>
+          <div className="button-container">
+            <input type="submit" />
+          </div>
+        </form>
+      </div>
+    </>
   );
 
   return (

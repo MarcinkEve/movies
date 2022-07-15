@@ -1,0 +1,48 @@
+.alert-modal {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  height: 100px;
+  width: fit-content;
+  background-color: rgba(206, 206, 206, 0.3);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1rem 2rem;
+  animation: mymove 1.5s infinite;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes mymove {
+  from {
+    top: -200px;
+  }
+  to {
+    bottom: 200px;
+  }
+}
+.alert-modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.alert-modal__close--button {
+  height: 2rem;
+  width: 2rem;
+  border: transparent;
+}
+.alert-modal__close--button-X {
+  top: 0;
+  right: 0;
+  font-size: 25px;
+  color: rgb(29, 28, 28);
+}
+.alert-modal__data {
+  padding-top: 1.5rem;
+}
+span {
+  font-size: 18px;
+}
